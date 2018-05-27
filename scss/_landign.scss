@@ -1,0 +1,189 @@
+$primary: #01b29e;
+
+@font-face {
+    font-family: "Lato";
+    src: url(../font/Lato-Regular.ttf);
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Lato", sans-serif;
+    letter-spacing: 4px;
+}
+
+hr {
+    margin: 20px auto;
+    max-width: 60%;
+    opacity: 0.9;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    overflow: hidden;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    background-position: center;
+}
+
+.full-screen {
+    height: 100vh;
+}
+
+.parallax {
+    background: no-repeat center center fixed;
+    background-size: cover;
+}
+
+.filter-dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#page-header {
+    h1 {
+        font-weight: 500;
+        font-size: 3.4rem;
+        color: white;
+        display: inline-block;
+        padding: 1.4rem 1.4rem 1.4rem 2rem;
+        margin-bottom: 3rem;
+        letter-spacing: 12px;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    .btn {
+        font-weight: 500;
+        font-size: 1.4rem;
+        padding: 0.8rem 2.4rem;
+        transition: all 0.8s;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.4rem;
+            padding: 1rem 1rem 1rem 1.6rem;
+        }
+
+        .btn {
+            font-weight: 400;
+            font-size: 1.2rem;
+            padding: 0.6rem 2.2rem;
+        }
+    }
+}
+
+.block {
+    padding: 0.6rem 0.8rem;
+    margin: 0.8rem 0;
+    background-color: white;
+    border-left: 4px solid #eee;
+    box-shadow: 1px 1px 2px #ccc;
+    transition: border-left 0.8s;
+    .content {
+        p {
+            font-size: 0.9rem;
+        }
+        h5 {
+            letter-spacing: 0px;
+        }
+    }
+
+    .file-link {
+        text-decoration: none;
+    }
+
+    .file-icon {
+        font-size: 3rem;
+        padding: 0 1rem 0 2rem;
+        color: #444;
+        transition: color 0.4s;
+        &:hover,
+        &:active {
+            color: $primary;
+        }
+    }
+
+    .file-date {
+        padding-top: 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    &:hover,
+    &:active {
+        border-left: 4px solid $primary;
+    }
+
+    @media (max-width: 576px) {
+        .file-icon {
+            padding: 0 0.6rem 0 1rem;
+        }
+    }
+}
+
+.card-lightbox {
+    position: relative;
+    overflow: hidden;
+    .image-lightbox {
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.06);
+        }
+    }
+}
+
+#stats {
+    .stat-item {
+        padding: 3rem 0;
+        .icon {
+            font-size: 4rem;
+        }
+
+        @media (max-width: 576px) {
+            .icon {
+                font-size: 3rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+#bottom {
+    background-color: #202020;
+    a {
+        color: #f8f9fa;
+        text-decoration: none;
+        &:hover,
+        &:active {
+            color: $primary;
+        }
+    }
+    .media {
+        font-size: 3rem;
+        padding-right: 1.4rem;
+    }
+}
+
+#footer {
+    background-color: #101010;
+    color: white;
+
+    a {
+        text-decoration: none;
+    }
+}

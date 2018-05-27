@@ -1,0 +1,42 @@
+#navbar-scroll {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out,
+        padding-bottom 0.3s;
+
+    &.bg-dark {
+        padding: 0.5rem 1rem;
+        transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out,
+            padding-bottom 0.3s;
+    }
+
+    @media (max-width: 992px) {
+        padding: 0.5rem 1rem;
+        background: black !important;
+    }
+}
+
+.navbar {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    .navbar-brand span {
+        letter-spacing: 4px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    &.bg-dark {
+        background: black !important;
+    }
+
+    .navbar-collapse .nav-link {
+        color: white;
+        &:hover {
+            color: #ced4da;
+        }
+    }
+}
