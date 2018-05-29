@@ -30,20 +30,6 @@ $(function() {
 });
 
 /**
- * Animacion scroll de la barra de navegacion
- */
-var navbarCollapse = function() {
-    if ($("#navbar-scroll").offset().top > 100) {
-        $("#navbar-scroll").addClass("bg-dark");
-    } else {
-        $("#navbar-scroll").removeClass("bg-dark");
-    }
-};
-navbarCollapse();
-// Collapse the navbar when page is scrolled
-$(window).scroll(navbarCollapse);
-
-/**
  * Animacion de contador
  */
 $(".counter").each(function() {
