@@ -52,16 +52,16 @@ $(".counter").each(function() {
 /**
  * Preloader
  */
-$(function() {
+/* $(function() {
     $('img').each(function() {
-        $(this).ready(function() {
+        $(this).load(function() {
             $("#preloader").fadeOut("slow");
         });
     });
+}); */
+$(window).on('load', function() {
+    $("#preloader").fadeOut("slow");
 });
-// $(document).ready(function() {
-//     $("#preloader").fadeOut("slow");
-// });
 
 /**
  * Init lightbox
