@@ -5,8 +5,14 @@ $primary: #01b29e;
     src: url(../font/Lato-Regular.ttf);
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: #f5f5f5;
+    margin-bottom: 72px;
 }
 
 h1,
@@ -182,7 +188,9 @@ hr {
 #footer {
     background-color: #101010;
     color: white;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     a {
         text-decoration: none;
     }
