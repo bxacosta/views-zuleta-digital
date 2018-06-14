@@ -111,13 +111,14 @@
                 <li class="breadcrumb-item">
                     <a href="dashboard.html">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Cuenta</li>
+                <li class="breadcrumb-item active">Usuarios</li>
+                <li class="breadcrumb-item active">Nuevo</li>
             </ol>
 
             <!-- Content -->
             <div class="card mb-3">
                 <div class="card-header">
-                    Datos de mi cuenta
+                    Registrar nuevo usuario
                 </div>
                 <div class="card-body">
                     <form>
@@ -131,29 +132,27 @@
                                 <input id="apellido" type="text" class="form-control" placeholder="Apellido">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <button type="submit" class="btn btn-primary float-right">Guardar</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-header">
-                    Cambiar contraseña
-                </div>
-                <div class="card-body">
-                    <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="clave-actual">Actual</label>
-                                <input id="clave-actual" type="password" class="form-control">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" class="form-control" placeholder="Email">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="clave-nueva">Nueva</label>
-                                <input id="clave-nueva" type="password" class="form-control">
+                                <label for="apellido">Tipo</label>
+                                <select id="tipo" class="form-control">
+                                    <option>Administrador</option>
+                                    <option>Moderador</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="clave">Contraseña</label>
+                                <input id="clave" type="password" class="form-control" placeholder="Contraseña">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="confirmar-clave">Confirmar contraseña</label>
+                                <input id="confirmar-clave" type="password" class="form-control" placeholder="Confirmar contraseña">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary float-right">Guardar</button>
