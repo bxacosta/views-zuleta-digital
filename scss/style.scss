@@ -1,2 +1,15 @@
 @import "custom-navbar";
 @import "landign";
+
+@import "dashboard/variables.scss";
+@import "dashboard/mixins.scss";
+@import "dashboard/global.scss";
+@import "dashboard/utilities.scss";
+@import "dashboard/navbar/navbar_global.scss";
+@import "dashboard/navbar/navbar_fixed.scss";
+@import "dashboard/navbar/navbar_static.scss";
+@import "dashboard/navbar/navbar_toggle.scss";
+@import "dashboard/navbar/navbar_colors.scss";
+@import "dashboard/cards.scss";
+@import "dashboard/login.scss";
+@import "dashboard/footer.scss";
