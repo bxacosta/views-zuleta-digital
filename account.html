@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Zuleta | Dashboard</title>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.svg" width="30" height="30" class="logo d-inline-block align-top mr-2" alt="logo" />
+            <span class="h4">zuleta</span>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav pt-2" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="dashboard.html">
+                        <i class="fas fa-tachometer-alt" style="font-size: 1.3rem;"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="far fa-file-alt" style="margin-left: 3px; font-size: 1.3rem;"></i>
+                        <span class="nav-link-text">Documentos</span>
+                        <i class="fas fa-angle-down float-right sidenav-submenu text-primary"></i>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a href="#">Nuevo</a>
+                        </li>
+                        <li>
+                            <a href="#">Administrar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                        <i class="far fa-images" style="font-size: 1.3rem;"></i>
+                        <span class="nav-link-text">Imágenes</span>
+                        <i class="fas fa-angle-down float-right sidenav-submenu text-primary"></i>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                        <li>
+                            <a href="login.html">Nuevo</a>
+                        </li>
+                        <li>
+                            <a href="register.html">Administrar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                        <i class="fas fa-users" style="font-size: 1.3rem;"></i>
+                        <span class="nav-link-text">Usuarios</span>
+                        <i class="fas fa-angle-down float-right sidenav-submenu text-primary"></i>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti">
+                        <li>
+                            <a href="#">Nuevo</a>
+                        </li>
+                        <li>
+                            <a href="#">Administrar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fas fa-angle-left toggle-icon text-primary"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="account.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        Nombre Apellido
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Salir
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Cuenta</li>
+            </ol>
+
+            <!-- Content -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    Datos de mi cuenta
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nombre">Nombre</label>
+                                <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="apellido">Apellido</label>
+                                <input id="apellido" type="text" class="form-control" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right">Guardar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Cambiar contraseña
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="clave-actual">Actual</label>
+                                <input id="clave-actual" type="password" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="clave-nueva">Nueva</label>
+                                <input id="clave-nueva" type="password" class="form-control">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    © 2018
+                    <a target="_blank" href="http://www.uce.edu.ec">Universidad Central del Ecuador</a>. Comuna Zuleta.
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fontawesome-all.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
