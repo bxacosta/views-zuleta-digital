@@ -111,14 +111,14 @@
                 <li class="breadcrumb-item">
                     <a href="dashboard.html">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">Usuarios</li>
+                <li class="breadcrumb-item active">Documentos</li>
                 <li class="breadcrumb-item active">Nuevo</li>
             </ol>
 
             <!-- Content -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <p class="h5 m-0">Registrar nuevo usuario</p>
+                    <p class="h5 m-0">Registrar nuevo documento</p>
                 </div>
                 <div class="card-body">
                     <form>
@@ -128,32 +128,49 @@
                                 <input id="nombre" type="text" class="form-control" placeholder="Nombre">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="apellido">Apellido</label>
-                                <input id="apellido" type="text" class="form-control" placeholder="Apellido">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="apellido">Tipo</label>
+                                <label for="apellido">Alcance</label>
                                 <select id="tipo" class="form-control">
-                                    <option>Administrador</option>
-                                    <option>Moderador</option>
+                                    <option>Publico</option>
+                                    <option>Interno</option>
                                 </select>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="link">Link</label>
+                            <input id="link" type="text" class="form-control" placeholder="Link">
+                        </div>
+
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="clave">Contraseña</label>
-                                <input id="clave" type="password" class="form-control" placeholder="Contraseña">
+                                <label for="tipo">Tipo</label>
+                                <div class="input-group">
+                                    <select id="tipo" class="form-control">
+                                        <option>Oficio</option>
+                                        <option>Carta</option>
+                                        <option>Informe</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#tipo-modal">Nuevo</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="confirmar-clave">Confirmar contraseña</label>
-                                <input id="confirmar-clave" type="password" class="form-control" placeholder="Confirmar contraseña">
+                                <label for="categoria">Categoría</label>
+                                <div class="input-group">
+                                    <select id="categoria" class="form-control">
+                                        <option>Fuentes internas</option>
+                                        <option>Otro</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#categoria-modal">Nuevo</button>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea id="descripcion" class="form-control" rows="2"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary float-right">Guardar</button>
                     </form>
@@ -176,23 +193,76 @@
         </a>
 
         <!-- Logout Modal-->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Salir de la cuenta</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Seleccione "Cerrar Sesión" para poder salir de su sesión actual.</div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <a class="btn btn-primary" href="index.html">Cerrar Sesión</a>
-                        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Salir de la cuenta</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Seleccione "Cerrar Sesión" para poder salir de su sesión actual.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <a class="btn btn-primary" href="index.html">Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Modal Categoria -->
+        <div class="modal fade" id="categoria-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Nueva Categoría</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="link">Nombre</label>
+                                <input id="link" type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Tipo -->
+        <div class="modal fade" id="tipo-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel">Nuevo Tipo</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="link">Nombre</label>
+                                <input id="link" type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- JavaScript Files -->
