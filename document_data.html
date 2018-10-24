@@ -12,6 +12,8 @@
     <!-- CSS Files -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.bootstrap4.css">
 
     <title>Zuleta | Dashboard</title>
 </head>
@@ -112,68 +114,89 @@
                     <a href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item active">Documentos</li>
-                <li class="breadcrumb-item active">Nuevo</li>
+                <li class="breadcrumb-item active">Administrar</li>
             </ol>
 
             <!-- Content -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <p class="h5 m-0">Registrar nuevo documento</p>
+                    <p class="h5 m-0">Documentos registrados</p>
                 </div>
                 <div class="card-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="nombre">Nombre</label>
-                                <input id="nombre" type="text" class="form-control" placeholder="Nombre">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="apellido">Alcance</label>
-                                <select id="tipo" class="form-control">
-                                    <option>Publico</option>
-                                    <option>Interno</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="link">Link</label>
-                            <input id="link" type="text" class="form-control" placeholder="Link">
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="tipo">Tipo</label>
-                                <div class="input-group">
-                                    <select id="tipo" class="form-control">
-                                        <option>Oficio</option>
-                                        <option>Carta</option>
-                                        <option>Informe</option>
-                                    </select>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#tipo-modal">Nuevo</button>
+                    <table id="users" class="table responsive table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Alcance</th>
+                                <th>Tipo</th>
+                                <th>Categoría</th>
+                                <th>Fecha Registro</th>
+                                <th>Usuario</th>
+                                <th>Link</th>
+                                <th>Descripción</th>
+                                <th data-priority="1">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Documento de datos</td>
+                                <td>Publico</td>
+                                <td>Oficio</td>
+                                <td>Documento</td>
+                                <td>12/11/2018</td>
+                                <td>Andres Perez</td>
+                                <td>www.google.com</td>
+                                <td>Descripción</td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="far fa-edit"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="categoria">Categoría</label>
-                                <div class="input-group">
-                                    <select id="categoria" class="form-control">
-                                        <option>Fuentes internas</option>
-                                        <option>Otro</option>
-                                    </select>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#categoria-modal">Nuevo</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Documento de datos</td>
+                                <td>Publico</td>
+                                <td>Oficio</td>
+                                <td>Documento</td>
+                                <td>12/01/2018</td>
+                                <td>Daniel Cortez</td>
+                                <td>www.google.com</td>
+                                <td>Descripción</td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="far fa-edit"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion">Descripción</label>
-                            <textarea id="descripcion" class="form-control" rows="2"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary float-right">Guardar</button>
-                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Alcance</th>
+                                <th>Tipo</th>
+                                <th>Categoría</th>
+                                <th>Fecha Registro</th>
+                                <th>Usuario</th>
+                                <th>Link</th>
+                                <th>Descripción</th>
+                                <th data-priority="1">Acción</th>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
         </div>
@@ -210,65 +233,16 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal Categoria -->
-        <div class="modal fade" id="categoria-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="exampleModalLabel">Nueva Categoría</h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="link">Nombre</label>
-                                <input id="link" type="text" class="form-control" placeholder="Nombre">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Tipo -->
-        <div class="modal fade" id="tipo-modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h3 class="modal-title" id="exampleModalLabel">Nuevo Tipo</h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="link">Nombre</label>
-                                <input id="link" type="text" class="form-control" placeholder="Nombre">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <!-- JavaScript Files -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/fontawesome-all.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.responsive.js"></script>
+    <script src="js/responsive.bootstrap4.js"></script>
     <script src="js/app.js"></script>
 </body>
 

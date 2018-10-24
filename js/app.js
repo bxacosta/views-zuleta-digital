@@ -16,7 +16,10 @@ $(function() {
             location.hostname == this.hostname
         ) {
             var link = $(this).attr("href");
-            console.log(headerHeight);
+            console.log(link);
+            link = link.replace("/", "");
+            console.log(link);
+            //console.log(headerHeight);
             $("html, body").animate(
                 {
                     scrollTop: $(link).offset().top - (headerHeight + offset)
@@ -133,16 +136,3 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
     });
 })(jQuery); // End of use strict
-
-
-/**
- * Init DataTables
- */
-$(document).ready(function () {
-    $('.table').DataTable({
-        language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.10.17/i18n/Spanish.json'
-        },
-        "info": false
-    });
-});
